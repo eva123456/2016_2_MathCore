@@ -2,7 +2,7 @@ module.exports = {
 	"swagger": "2.0",
 	"info": {
 		"version": "0.0.3",
-		"title": "Jacal|Space API",
+		"title": "Jackal|Space API",
 		"description": "**Наше апи  <(￣︶￣)>**"
 	},
 	"basePath": "/api",

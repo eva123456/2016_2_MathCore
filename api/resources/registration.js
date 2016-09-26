@@ -25,13 +25,12 @@ exports.post = {
 				"type": "#/definitions/Registration"
 			}
 		},
+		"204": {
+			"description": "Пользователь уже авторизован",
+		},
 		"400": {
 			"description": "Логин/email уже используются",
-		},
-		"403": {
-			"description": "Пользователь уже авторизован",
 		}
-
 
 	},
 	"x-amples": [{

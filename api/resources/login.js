@@ -1,6 +1,6 @@
 exports.post = {
 	"tags": ["login"],
-	"description": "Метод создает нового пользователя",
+	"description": "Метод позволяет пользователю авторизироваться",
 	"parameters": [
 		{
 			"name": "name",
@@ -20,8 +20,11 @@ exports.post = {
 				"type": "#/definitions/Login"
 			}
 		},
+		"302": {
+			"description": "Пользователь уже авторизирован"
+		},
 		"400": {
-			"description": "Неверный логин/пароль"
+			"description": "Невалидный логин/пароль"
 		}
 	},
 	"x-amples": [{

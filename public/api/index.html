@@ -3,11 +3,11 @@
 <head>
     <link rel="stylesheet" href="/api/main.css">
     <meta charset="UTF-8">
-    <title>Jacal|Space API</title>
+    <title>Jackal|Space API</title>
 </head>
 <body>
 <div class="container">
-    <h1>Jacal|Space API</h1>
+    <h1>Jackal|Space API</h1>
     <p><p><strong>Наше апи  &lt;(￣︶￣)&gt;</strong></p>
     </p>
     
@@ -70,7 +70,7 @@
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
-                        <p>Метод создает нового пользователя</p>
+                        <p>Метод позволяет пользователю авторизироваться</p>
             
                     </section>
                     
@@ -143,6 +143,23 @@
                                                 </div></div>
                                             
                                             </div>                </dd>
+                                    <dt class="sw-response-302">
+                                        302 Found
+                                    
+                                    </dt>
+                                    <dd class="sw-response-302">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Пользователь уже авторизирован</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
                                     <dt class="sw-response-400">
                                         400 Bad Request
                                     
@@ -150,7 +167,7 @@
                                     <dd class="sw-response-400">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p>Неверный логин/пароль</p>
+                                                    <p>Невалидный логин/пароль</p>
                                             
                                                 </div>
                                             </div>
@@ -260,14 +277,14 @@
                                                 </div></div>
                                             
                                             </div>                </dd>
-                                    <dt class="sw-response-400">
-                                        400 Bad Request
+                                    <dt class="sw-response-204">
+                                        204 No Content
                                     
                                     </dt>
-                                    <dd class="sw-response-400">
+                                    <dd class="sw-response-204">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p>Логин/email уже используются</p>
+                                                    <p>Пользователь уже авторизован</p>
                                             
                                                 </div>
                                             </div>
@@ -277,14 +294,14 @@
                                             </div>
                                             
                                             </div>                </dd>
-                                    <dt class="sw-response-403">
-                                        403 Forbidden
+                                    <dt class="sw-response-400">
+                                        400 Bad Request
                                     
                                     </dt>
-                                    <dd class="sw-response-403">
+                                    <dd class="sw-response-400">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p>Пользователь уже авторизован</p>
+                                                    <p>Логин/email уже используются</p>
                                             
                                                 </div>
                                             </div>
