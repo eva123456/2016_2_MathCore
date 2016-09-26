@@ -2,7 +2,7 @@
 
 let userData = {};
 
-function filter (str, rules = ['ЛОЛ']) {
+function filter (str, rules = ['ЛОЛ','KEK']) {
 	rules = rules.map(rule=> {
         return {
             regexp: new RegExp('((^|\[^a-zA-Zа-яёА-ЯЁ]))'+rule+'(?=($|\[^a-zA-Zа-яёА-ЯЁ]))','ig'),
@@ -16,7 +16,7 @@ function filter (str, rules = ['ЛОЛ']) {
 }
 function replacer(str, p1, p2, offset, s) {
     var score = str.split('');
-	if(('а'<score[0] && score[0]<'я')||('А'<score[0] && score[0]<'Я')||score[0]=='Ё'||score[0]=='ё') {
+	if(('а'<score[0] && score[0]<'я')||('А'<score[0] && score[0]<'Я')||score[0]=='Ё'||score[0]=='ё'||('a'<score[0]&&score[0]<'z')||('A'<score[0]&&score[0]<'Z')) {
         var i = 0;
 		while ( i < str.length ) {
 		    score[i]='*';
