@@ -1,5 +1,5 @@
 exports.post = {
-	"tags": ["authentification"],
+	"tags": ["login"],
 	"description": "Метод создает нового пользователя",
 	"parameters": [
 		{
@@ -17,7 +17,7 @@ exports.post = {
 		"200": {
 			"schema": {
 				"description": "Пользователь авторизирован",
-				"type": "#/definitions/Authentification"
+				"type": "#/definitions/Login"
 			}
 		},
 		"400": {
@@ -29,7 +29,7 @@ exports.post = {
 		"request": {
 			"params": {
 				"login": "test",
-				"text": "Проверяем"
+				"password": "123"
 			}
 		},
 		"response": {

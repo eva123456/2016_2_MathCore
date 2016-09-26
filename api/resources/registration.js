@@ -21,21 +21,26 @@ exports.post = {
 	"responses": {
 		"200": {
 			"schema": {
-				"description": "Пользователь создан_/",
+				"description": "Пользователь создан",
 				"type": "#/definitions/Registration"
 			}
 		},
 		"400": {
 			"description": "Логин/email уже используются",
+		},
+		"403": {
+			"description": "Пользователь уже авторизован",
 		}
+
 
 	},
 	"x-amples": [{
-		"description": "создание тестового сообщения",
+		"description": "создание тестового пользователя",
 		"request": {
 			"params": {
 				"login": "test",
-				"text": "Проверяем"
+				"password": "123",
+				"email":"test@test"
 			}
 		},
 		"response": {

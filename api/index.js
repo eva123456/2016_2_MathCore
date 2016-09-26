@@ -3,22 +3,20 @@ module.exports = {
 	"info": {
 		"version": "0.0.3",
 		"title": "Jacal|Space API",
-		"description": "**Тип наше апи  <(￣︶￣)>**"
+		"description": "**Наше апи  <(￣︶￣)>**"
 	},
 	"basePath": "/api",
 	"schemes": ["http"],
    	"host": "http://localhost:3000",
 
 	paths: {
-		'/messages': require('./resources/messages'),
 		'/registration': require('./resources/registration'),
-		'/authentication': require('./resources/authentification')
+		'/login': require('./resources/login')
 	},	
 	
 	definitions: {
-		Message: require('./scheme/Message'),
 		User: require('./scheme/Registration'),
-		Authentication: require('./scheme/Authentification')
+		Login: require('./scheme/Login')
 	}
 
 }
