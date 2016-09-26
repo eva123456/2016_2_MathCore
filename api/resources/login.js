@@ -16,19 +16,19 @@ exports.post = {
 	"responses": {
 		"200": {
 			"schema": {
-				"description": "Пользователь авторизирован",
+				"description": "Пользователь успешно авторизирован",
 				"type": "#/definitions/Login"
 			}
 		},
-		"302": {
+		"204": {
 			"description": "Пользователь уже авторизирован"
 		},
 		"400": {
-			"description": "Невалидный логин/пароль"
+			"description": "Неправильный логин/пароль"
 		}
 	},
 	"x-amples": [{
-		"description": "создание тестового сообщения",
+		"description": "Тестовый логин",
 		"request": {
 			"params": {
 				"login": "test",

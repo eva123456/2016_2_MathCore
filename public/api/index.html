@@ -135,7 +135,7 @@
                                                 <div  class="panel panel-definition">
                                                     <div class="panel-body">
                                                                 <section class="json-schema-description">
-                                                                    <p>Пользователь авторизирован</p>
+                                                                    <p>Пользователь успешно авторизирован</p>
                                                             
                                                                 </section>
                                                             
@@ -143,11 +143,11 @@
                                                 </div></div>
                                             
                                             </div>                </dd>
-                                    <dt class="sw-response-302">
-                                        302 Found
+                                    <dt class="sw-response-204">
+                                        204 No Content
                                     
                                     </dt>
-                                    <dd class="sw-response-302">
+                                    <dd class="sw-response-204">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <p>Пользователь уже авторизирован</p>
@@ -167,7 +167,7 @@
                                     <dd class="sw-response-400">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p>Невалидный логин/пароль</p>
+                                                    <p>Неправильный логин/пароль</p>
                                             
                                                 </div>
                                             </div>
@@ -301,7 +301,24 @@
                                     <dd class="sw-response-400">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p>Логин/email уже используются</p>
+                                                    <p>Одно из полей пустое</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                                    <dt class="sw-response-403">
+                                        403 Forbidden
+                                    
+                                    </dt>
+                                    <dd class="sw-response-403">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>Логин/email уже используются или что-то еще пошло не так</p>
                                             
                                                 </div>
                                             </div>
