@@ -1,10 +1,10 @@
 exports.post = {
-	"tags": ["login"],
+	"tags": ["session"],
 	"description": "Метод позволяет пользователю авторизироваться",
 	"parameters": [
 		{
-			"name": "name",
-			"description": "Имя пользователя",
+			"name": "login",
+			"description": "Login пользователя",
 			"type": "string"
 		},
 		{
@@ -17,7 +17,7 @@ exports.post = {
 		"200": {
 			"schema": {
 				"description": "Пользователь успешно авторизирован",
-				"type": "#/definitions/Login"
+				"type": "#/definitions/Session"
 			}
 		},
 		"204": {

@@ -10,13 +10,13 @@ module.exports = {
    	"host": "http://localhost:3000",
 
 	paths: {
-		'/registration': require('./resources/registration'),
-		'/login': require('./resources/login')
+		'/user': require('./resources/user'),
+		'/session': require('./resources/session')
 	},	
 	
 	definitions: {
-		User: require('./scheme/Registration'),
-		Login: require('./scheme/Login')
+		User: require('./scheme/User'),
+		Login: require('./scheme/Session')
 	}
 
 }

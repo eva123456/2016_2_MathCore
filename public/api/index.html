@@ -19,7 +19,7 @@
     
         
         <h2 id="swagger--summary-tags">Summary</h2>
-            <h3 id="tag-registration" class="swagger-summary-tag">Tag: registration</h3>
+            <h3 id="tag-user" class="swagger-summary-tag">Tag: user</h3>
             <p></p>
         
             <table class="table table-bordered table-condensed swagger--summary">
@@ -31,12 +31,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="#operation--registration-post">POST /registration</a></td>
+                        <td><a href="#operation--user-post">POST /user</a></td>
                         <td></td>
                     </tr>
                 </tbody>
             </table>
-            <h3 id="tag-login" class="swagger-summary-tag">Tag: login</h3>
+            <h3 id="tag-session" class="swagger-summary-tag">Tag: session</h3>
             <p></p>
         
             <table class="table table-bordered table-condensed swagger--summary">
@@ -48,7 +48,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="#operation--login-post">POST /login</a></td>
+                        <td><a href="#operation--session-post">POST /session</a></td>
                         <td></td>
                     </tr>
                 </tbody>
@@ -60,13 +60,13 @@
     <h2>Paths</h2>
     
         
-        <span id="path--login"></span>
-            <div id="operation--login-post" class="swagger--panel-operation-post panel">
+        <span id="path--session"></span>
+            <div id="operation--session-post" class="swagger--panel-operation-post panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/login</strong></h3>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/session</strong></h3>
                         Tags:
-                            <a href="#tag-login">login</a>
+                            <a href="#tag-session">session</a>
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
@@ -88,8 +88,8 @@
                                 <tbody>
                                         <tr>
                                             <td>
-                                                name
-                                            <td><p>Имя пользователя</p>
+                                                login
+                                            <td><p>Login пользователя</p>
                                         </td>
                                             <td></td>
                                             <td><span class="json-property-type">string</span>
@@ -181,13 +181,13 @@
                         </section>
                 </div>
             </div>    
-        <span id="path--registration"></span>
-            <div id="operation--registration-post" class="swagger--panel-operation-post panel">
+        <span id="path--user"></span>
+            <div id="operation--user-post" class="swagger--panel-operation-post panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/registration</strong></h3>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/user</strong></h3>
                         Tags:
-                            <a href="#tag-registration">registration</a>
+                            <a href="#tag-user">user</a>
                 </div>
                 <div class="panel-body">
                     <section class="sw-operation-description">
@@ -404,45 +404,12 @@
                         </div>
                     <div class="panel-body">
                                 <section class="json-schema-description">
-                                    <p>Пользователь</p>
+                                    <p>Сообщение</p>
                             
                                 </section>
                             
                                     <section class="json-schema-properties">
                                         <dl>
-                                                <dt data-property-name="login">
-                                                    <span class="json-property-name">login:</span>
-                                                    <span class="json-property-type">string</span>
-                                                    <span class="json-property-range" title="Value limits"></span>
-                                                    
-                                                        <span class="json-property-range" title="String length limits">
-                                                                (4 to 50 chars)
-                                                        </span>
-                                                </dt>
-                                                <dd>
-                                                    <p>Login пользователя для захода на сайт</p>
-                                    
-                                                    <div class="json-inner-schema">
-                                                        
-                                                    </div>
-                                                </dd>
-                                                <dt data-property-name="password">
-                                                    <span class="json-property-name">password:</span>
-                                                    <span class="json-property-type">password</span>
-                                                    <span class="json-property-range" title="Value limits"></span>
-                                                    
-                                                        <span class="json-property-range" title="String length limits">
-                                                                (6 to 50 chars)
-                                                        </span>
-                                                        <span class="json-property-required"></span>
-                                                </dt>
-                                                <dd>
-                                                    <p>Пароль</p>
-                                    
-                                                    <div class="json-inner-schema">
-                                                        
-                                                    </div>
-                                                </dd>
                                                 <dt data-property-name="email">
                                                     <span class="json-property-name">email:</span>
                                                     <span class="json-property-type">string</span>
@@ -454,7 +421,38 @@
                                                         <span class="json-property-required"></span>
                                                 </dt>
                                                 <dd>
-                                                    <p>E-mail пользователя</p>
+                                                    <p>Логин автора</p>
+                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                    </div>
+                                                </dd>
+                                                <dt data-property-name="message">
+                                                    <span class="json-property-name">message:</span>
+                                                    <span class="json-property-type">string</span>
+                                                    <span class="json-property-range" title="Value limits"></span>
+                                                    
+                                                        <span class="json-property-range" title="String length limits">
+                                                                (2 to 140 chars)
+                                                        </span>
+                                                        <span class="json-property-required"></span>
+                                                </dt>
+                                                <dd>
+                                                    <p>Текст сообщения</p>
+                                    
+                                                    <div class="json-inner-schema">
+                                                        
+                                                    </div>
+                                                </dd>
+                                                <dt data-property-name="id">
+                                                    <span class="json-property-name">id:</span>
+                                                    <span class="json-property-type">integer</span>
+                                                    <span class="json-property-range" title="Value limits">, { x ∈ ℤ | x ≥ 0 }</span>
+                                                    
+                                                        <span class="json-property-required"></span>
+                                                </dt>
+                                                <dd>
+                                                    <p>Идентификатор сообщения</p>
                                     
                                                     <div class="json-inner-schema">
                                                         

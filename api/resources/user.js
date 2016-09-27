@@ -1,5 +1,5 @@
 exports.post = {
-	"tags": ["registration"],
+	"tags": ["user"],
 	"description": "Метод создает нового пользователя",
 	"parameters": [
 		{
@@ -22,7 +22,7 @@ exports.post = {
 		"200": {
 			"schema": {
 				"description": "Пользователь создан",
-				"type": "#/definitions/Registration"
+				"type": "#/definitions/User"
 			}
 		},
 		"204": {
