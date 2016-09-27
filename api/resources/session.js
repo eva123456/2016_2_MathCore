@@ -1,11 +1,17 @@
 exports.post = {
 	"tags": ["session"],
 	"description": "Метод позволяет пользователю авторизироваться",
+    "consumes":"application/json",
 	"parameters": [
 		{
-			"name": "login+password",
-			"description": "login и password в формате json",
-			"type": "application/json"
+			"name": "login",
+			"description": "Login пользователя",
+			"type": "string"
+		},
+		{
+			"name": "password",
+			"description": "Пароль",
+			"type": "string"
 		}
 	],
 	"responses": {
