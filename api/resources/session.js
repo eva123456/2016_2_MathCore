@@ -3,14 +3,9 @@ exports.post = {
 	"description": "Метод позволяет пользователю авторизироваться",
 	"parameters": [
 		{
-			"name": "login",
-			"description": "Login пользователя",
-			"type": "string"
-		},
-		{
-			"name": "password",
-			"description": "Пароль",
-			"type": "string"
+			"name": "login+password",
+			"description": "login и password в формате json",
+			"type": "application/json"
 		}
 	],
 	"responses": {
