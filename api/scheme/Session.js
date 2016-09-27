@@ -17,5 +17,5 @@ module.exports =  {
 		}		
 	},
 
-	"required": ["name", "password", "email", "id"]
+	"required": ["name", "password"]
 };

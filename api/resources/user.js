@@ -1,21 +1,40 @@
 exports.post = {
 	"tags": ["user"],
 	"description": "Метод создает нового пользователя",
+	"produces":"application/json",
+	"consumes":"application/json",
 	"parameters": [
 		{
-			"name": "login",
-			"description": "Имя пользователя",
-			"type": "string"
-		},
-		{
-			"name": "password",
-			"description": "Пароль",
-			"type": "string"
-		},
-		{
-			"name": "email",
-			"description": "E-mail пользователя",
-			"type": "string"
+		    "in":"body",
+			"name":"body",
+			"required":"true",
+			"schema": {
+				"type": "object",
+				"description": "Пользователь",
+
+				"properties": {
+					"login": {
+						"description": "Login пользователя для захода на сайт",
+						"type": "string",
+						"minLength": 4,
+						"maxLength": 50
+					},
+					"password": {
+						"description": "Пароль",
+						"type": "password",
+						"minLength": 6,
+						"maxLength": 50
+					},		
+					"email": {
+						"description": "E-mail пользователя",
+						"type": "string",
+						"minLength": 6,
+						"maxLength": 50
+					}
+				},
+
+				"required": ["name", "password", "email"]
+			 }
 		}
 	],
 	"responses": {

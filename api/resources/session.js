@@ -1,17 +1,33 @@
 exports.post = {
 	"tags": ["session"],
 	"description": "Метод позволяет пользователю авторизироваться",
-    "consumes":"application/json",
+    "produces":"application/json",
+	"consumes":"application/json",
 	"parameters": [
 		{
-			"name": "login",
-			"description": "Login пользователя",
-			"type": "string"
-		},
-		{
-			"name": "password",
-			"description": "Пароль",
-			"type": "string"
+		    "in":"body",
+			"name":"body",
+			"required":"true",
+			"schema": {
+				"type": "object",
+				"description": " Авторизация пользователя",
+
+				"properties": {
+					"name": {
+						"description": "Имя пользователя",
+						"type": "string",
+						"minLength": 4,
+						"maxLength": 50
+					},
+					"password": {
+						"description": "Пароль",
+						"type": "password",
+						"minLength": 6,
+						"maxLength": 50
+					}		
+				},
+				"required": ["name", "password"]
+			}
 		}
 	],
 	"responses": {

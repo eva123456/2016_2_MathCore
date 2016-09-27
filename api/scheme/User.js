@@ -1,26 +1,27 @@
 module.exports =  {
 	"type": "object",
-	"description": "Сообщение",
+	"description": "Пользователь",
 
 	"properties": {
+		"login": {
+			"description": "Login пользователя для захода на сайт",
+			"type": "string",
+			"minLength": 4,
+ 			"maxLength": 50
+		},
+		"password": {
+			"description": "Пароль",
+			"type": "password",
+			"minLength": 6,
+ 			"maxLength": 50
+		},		
 		"email": {
-			"description": "Логин автора",
+			"description": "E-mail пользователя",
 			"type": "string",
 			"minLength": 6,
  			"maxLength": 50
-		},
-		"message": {
-			"description": "Текст сообщения",
-			"type": "string",
-			"minLength": 2,
- 			"maxLength": 140
-		},
-		"id": {
-			"description": "Идентификатор сообщения",
-			"type": "integer",
-			"minimum": 0
 		}
 	},
 
-	"required": ["email", "message", "id"]
+	"required": ["name", "password", "email"]
 };
